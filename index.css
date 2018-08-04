@@ -1,0 +1,111 @@
+.back {
+    background-color: #999;
+    width: 800px;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+}
+.bannertext {
+    fill: white;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -8px;
+    transform-origin: 0% center;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.75s, 3s;
+    animation-duration: 1s, 1s;
+    animation-iteration-count: 1, 1;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1), cubic-bezier(0.2, 0, 0, 1);
+    animation-name: bannertext-easein, bannertext-easeout;
+}
+@keyframes bannertext-easein {
+    from { 
+        opacity: 0.0;
+        transform: translateX(0px);
+        letter-spacing: -8px; }
+    to { 
+        opacity: 1.0;
+        transform: translateX(100px);
+        letter-spacing: 0px; }
+}
+@keyframes bannertext-easeout {
+    from { 
+        opacity: 1.0;
+        transform: translateX(100px);
+        letter-spacing: 0px; }
+    to { 
+        opacity: 0.0;
+        transform: translateX(200px);
+        letter-spacing: 8px; }
+}
+.logobg {
+    animation-delay: 0s, 0.75s;
+    animation-duration: 0.5s, 1s;
+    animation-iteration-count: 1, 1;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1), cubic-bezier(0.2, 0, 0, 1);
+    animation-name: logo-easein, logo-easeout;
+    transform-origin: 25% center;
+    animation-fill-mode: forwards;
+}
+.logoimg {
+    fill: url(#tdflogo);
+    animation-delay: 0s, 0.75s;
+    animation-duration: 0.5s, 1s;
+    animation-iteration-count: 1, 1;
+    animation-timing-function: linear, cubic-bezier(0.2, 0, 0, 1);
+    animation-name: logoimg-fadein, logo-easeout;
+    transform-origin: 25% center;
+    animation-fill-mode: forwards;
+}
+@keyframes logo-easein {
+    from { transform: scale(0.0); }
+    to { transform: scale(1.0); }
+}
+@keyframes logoimg-fadein {
+    from { 
+        opacity: 0.0; }
+    to { 
+        opacity: 1.0; }
+}
+@keyframes logo-easeout {
+    from { transform: scale(1.0); }
+    to { transform: scale(0.0); }
+}
+.spinner {
+    fill: none;
+    stroke: #ffc861;
+    transform-origin: 25% center;
+    transform: rotateZ(-90deg);
+    stroke-width: 12px;
+    stroke-dasharray: 1131;
+    animation-delay: 0s, 0.75s, 3s;
+    animation-duration: 0.5s, 1s, 1s;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1), cubic-bezier(0.2, 0, 0, 1), cubic-bezier(0.2, 0, 0, 1);
+    animation-name: spinner-easein, spinner-banner, spinner-easeout;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spinner-easein {
+    from { 
+        stroke-dashoffset: 1131;
+        transform: rotateZ(-90deg); }
+    to { stroke-dashoffset: 0;
+         transform: rotateZ(0deg); }
+}
+@keyframes spinner-banner {
+    from {
+        stroke-dashoffset: 0;
+        transform: rotateZ(0deg); }
+    to {
+        stroke-dashoffset: 182;
+        transform: rotateZ(390deg); }
+}
+@keyframes spinner-easeout {
+    from {
+        stroke-dashoffset: 182;
+        transform: rotateZ(30deg); }
+    to {
+        stroke-dashoffset: -1131;
+        transform: rotateZ(270deg); }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="index.css">
+            <link rel="preload" href="img.png" as="image">
+        </head>
+        <title>TDF Spinner demo</title>
+    <body>
+        <div class="back">
+            <svg width="800px" height="400px" viewBox="0, 0, 800, 400">
+                <defs>
+                    <pattern id="tdflogo" x="0%" y="0%" height="100%" width="100%" viewBox="0,0,500,500">
+                        <image x="0%" y="0%" width="500" height="500" xlink:href="img.png"></image>
+                    </pattern>
+                </defs>
+                <circle class="logobg" cx="200" cy="200" r="180" fill="#fff"/>
+                <circle class="logoimg" cx="200" cy="200" r="180"/>
+                <circle class="spinner" cx="200" cy="200" r="180"/>
+                <text class="bannertext" x="25" y="250" font-size="120">DÉPART</text>
+            </svg>
+        </div>
+    </body>
+</html>
